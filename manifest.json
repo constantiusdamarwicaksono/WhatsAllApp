@@ -1,0 +1,26 @@
+{
+    "name":"WhatsAllApp",
+    "version":"0.0.0.1",
+    "manifest_version":2,
+    "description":"UI overlay for WhatsApp Web to enumerate phone numbers, profile pics, about texts and online statuses",
+	"web_accessible_resources" : ["/ui.js"],
+	  "icons": {
+		"128": "icon_128px.png",
+		"48": "icon_48px.png"
+	  },
+	 "browser_action": {
+		"default_icon": "icon_48px.png"
+	  },
+    "content_scripts": [
+      {
+        "matches": ["https://web.whatsapp.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "permissions":[
+        "activeTab"
+        ]
+	"homepage_url": "https://github.com/LoranKloeze/WhatsAllApp",	
+
+}
